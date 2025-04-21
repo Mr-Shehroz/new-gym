@@ -23,6 +23,9 @@ export default function Announcement() {
         {currentHeading === "JOIN MY FREE DISCORD" ? (
           <>
             <Image
+              width={100}
+            height={100}
+              // 👇 Replace this with your image path or URL
               src="/heading.png" // 👈 Replace this with your image path or URL
               alt="Discord"
               className="w-8 h-8"

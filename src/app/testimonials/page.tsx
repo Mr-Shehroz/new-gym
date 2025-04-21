@@ -44,12 +44,12 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="bg-black text-white">
+    <section className="bg-[url(/neon_bg.webp)] bg-cover bg-center bg-no-repeat text-white">
       <Announcement />
       <Header />
 
       <div className="bg-[url(/testi.webp)] bg-cover bg-center bg-no-repeat py-16 text-center">
-        <h1 className="text-4xl font-bold text-[#87E64B] italic">TESTIMONIALS</h1>
+        <h1 className="text-4xl font-bold text-white italic">TESTIMONIALS</h1>
       </div>
 
       <div className="max-w-4xl mx-auto px-6 py-16 flex flex-col gap-10">
