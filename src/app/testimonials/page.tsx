@@ -44,63 +44,63 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="bg-[url(/neon_bg.webp)] bg-cover bg-center bg-no-repeat text-white">
+    <section className="text-white">
       <Announcement />
       <Header />
+      <div className="bg-[url(/neon_bg.webp)] bg-cover bg-center bg-no-repeat mb-1">
+        <div className="bg-[url(/testi.webp)] bg-cover bg-center bg-no-repeat py-16 text-center">
+          <h1 className="text-4xl font-bold text-white italic">TESTIMONIALS</h1>
+        </div>
 
-      <div className="bg-[url(/testi.webp)] bg-cover bg-center bg-no-repeat py-16 text-center">
-        <h1 className="text-4xl font-bold text-white italic">TESTIMONIALS</h1>
-      </div>
-
-      <div className="max-w-4xl mx-auto px-6 py-16 flex flex-col gap-10">
-        {testimonials.map((testimonial, index) => (
-          <div
-            key={index}
-            className="bg-black border border-[#C2C2C2] rounded-3xl shadow-md p-6 flex flex-col justify-between space-y-4"
-          >
-            {/* Client Info */}
-            <div className="flex items-center gap-6">
-              <Image
-                src={testimonial.image}
-                width={80}
-                height={80}
-                className="rounded-full object-cover"
-                alt={testimonial.name}
-              />
-              <div className="flex items-center gap-4">
-                <div className="h-[60px] w-[3px] bg-[#87E64B]" />
-                <div>
-                  <Image
-                    src={testimonial.quoteImg}
-                    height={30}
-                    width={30}
-                    alt="Quote"
-                    className="mb-1"
-                  />
-                  <h2 className="text-lg font-semibold">{testimonial.name}</h2>
-                  <h3 className="text-sm text-gray-500">{testimonial.date}</h3>
+        <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+          {testimonials.map((testimonial, index) => (
+            <div
+              key={index}
+              className="bg-black border border-[#C2C2C2] rounded-3xl shadow-md p-6 flex flex-col justify-between space-y-4 w-full"
+            >
+              {/* Client Info */}
+              <div className="flex items-center gap-6">
+                <Image
+                  src={testimonial.image}
+                  width={80}
+                  height={80}
+                  className="rounded-full object-cover"
+                  alt={testimonial.name}
+                />
+                <div className="flex items-center gap-4">
+                  <div className="h-[60px] w-[3px] bg-[#87E64B]" />
+                  <div>
+                    <Image
+                      src={testimonial.quoteImg}
+                      height={30}
+                      width={30}
+                      alt="Quote"
+                      className="mb-1"
+                    />
+                    <h2 className="text-lg font-semibold">{testimonial.name}</h2>
+                    <h3 className="text-sm text-gray-500">{testimonial.date}</h3>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            {/* Testimonial Content */}
-            <p className="text-base leading-relaxed text-gray-300">
-              {testimonial.content}
-            </p>
+              {/* Testimonial Content */}
+              <p className="text-base leading-relaxed text-gray-300">
+                {testimonial.content}
+              </p>
 
-            {/* Rating */}
-            <div>
-              <Image
-                src={testimonial.ratingImg}
-                height={30}
-                width={120}
-                alt="Rating stars"
-              />
+              {/* Rating */}
+              <div>
+                <Image
+                  src={testimonial.ratingImg}
+                  height={30}
+                  width={120}
+                  alt="Rating stars"
+                />
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-
       <Footer />
     </section>
   );
