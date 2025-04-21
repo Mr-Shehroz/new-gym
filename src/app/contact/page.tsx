@@ -1,6 +1,13 @@
+import Announcement from "../components/announcement";
+import Footer from "../components/footer";
+import Header from "../components/header";
+
 export default function About() {
     return (
         <section className="bg-black text-white">
+            <Announcement />
+            <Header />
+
             <div className="max-w-3xl mx-auto px-6 py-16 text-center space-y-8">
                 <h1 className="text-4xl font-bold italic text-[#87E64B]">CONTACT ME</h1>
                 <h4 className="text-lg text-gray-300">
@@ -57,6 +64,8 @@ export default function About() {
                     </div>
                 </form>
             </div>
+
+            <Footer />
         </section>
     );
 }

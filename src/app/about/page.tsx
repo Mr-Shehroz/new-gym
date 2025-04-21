@@ -1,8 +1,13 @@
 import Image from "next/image";
+import Announcement from "../components/announcement";
+import Footer from "../components/footer";
+import Header from "../components/header";
 
 export default function About() {
     return (
         <section className="bg-black text-white bg-[url(/bg.webp)] bg-cover bg-center bg-no-repeat">
+            <Announcement />
+            <Header/>
             <div className="max-w-7xl mx-auto px-6 py-16">
                 <h1 className="text-4xl font-bold text-center mb-12 italic text-[#87E64B]">
                     ABOUT ME
@@ -29,6 +34,7 @@ export default function About() {
                     </div>
                 </div>
             </div>
+            <Footer />
         </section>
     );
 }
